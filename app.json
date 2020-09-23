@@ -21,6 +21,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "android": {
+      "package": "maroc24.ma",
+      "config": {
+        "googleMaps": { "apiKey": "AIzaSyACvGyYQmWKzcA5Lx4dua5qRsO4oYuqPDI" }
+      }
     }
   }
 }

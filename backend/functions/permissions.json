@@ -1,0 +1,13 @@
+
+{
+  "type": "service_account",
+  "project_id": "marocculture-e219e",
+  "private_key_id": "05fb2b5068cfc5f5c2ec11c2d25ff197ad9c4724",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDG1AMLsvO5dQBb\nERE+ldHb1Kxqfa+K0TVMFp32cfk+sS4Xa+0x0YlAUvyWx48vLYUnLHS1LK+WJv/+\nYs2VqWo/Z32n4djDEEOPX0gzBzaLdp201jTo8VLB+adHVZDrS7ZEthLInHJZA1oH\nE0qLOlyYgta6DnzNoBQm2rvZSSmrda0vIzjGeLh6VfbvTGPTU3s1+1U33QnQJyKE\n9NISg4Wt7o48J2dy+C/AjKxkqVyRtBREr4z7AZyfqXDic4OQZUR1utVItHsuiaQb\nhuik/UtWsJAf5F4Po/GnfplzooWaKhBuArKWgqpJncd7vIhxXGPf6FB+Gz8YgQEs\nPapndCbVAgMBAAECggEAGJtdjcxFw006euAdCRNZUm0QMj/ALXHLOFGmQWgFR5/S\n9f1v8MCfeBFX3GtHNQ4GUtJQK/9N8yB8LHta49ZV5WdFUwqC8qU9JJh6DYKrhU1r\n+C5N2bR1dbc+33e0r0ItWnSe1NVz22tW8CrliLSeMsEiml/iTJUurp5XLZg96s+2\nIvCGArfgupIDr+doX3WfxX3OgSl4ZVFLljjKQjQHuX3wjzjJiUj98hS3p/B4St//\nYGm/iQ+dRL9/RwisnVYOKIPAOMrqgObC4w6YkOlMkp4NZJ7IhSzLmyivVYMFg+0t\nKJ55GHOFIh5ETLX5+P877/x2iErjCz/2jYstGrSX0wKBgQDq+qXo79DImh9D/xAy\nFoH6PTVhTPSwmt6V5LaScNOCZNIhbQmO5N0HzkKZVg7CdG6BKCBmsjPL9HkU6S3l\nJUKx5KPlZcvJKwAcvHs2SOJCdI4G5Va1AtCDHW3PbwaJl6Rto/o28wjk4j9mPRA5\nEmzaehRVAIb3WX+i5UGamQyXswKBgQDYnXTxreQY5Kq3JjxoD6ut2a53CmnLwC3+\nB8ByBuZsipPUmRSt6ARRgcoV2x2qBt/G5J2V+vngda0rAiiLfFzpQGcBFNeUOsjg\naQJwj9Hzo5WLhwDUC4xVSQrdt6tRWhIqjrTzYSHnL/Pz9E7PaUALdfcK8Aybl+uB\nvN/rPUSDVwKBgGI2YSH7Gki+IlNJSHum7Kyq6KTChYNLN71u2uBaSA04Fpvh9xzC\ni5+3lh6A2aps/8L8Ao7p7LxScklLLOOZr0arSdWXtpVeY62fGeCWlfswvCwlrxf5\nFS24Hy2UOidIOnGZF/vfmNgRuG4DF8TC7rxiSh09GyxHPBHZwJHdZmYBAoGASu+t\n1S3jCvmQVWvU2esR6UK1KFlh4CrLvmXQHaJldIc8PP/4N3FcjRXpY0Y6LOfT4mqU\nWZ5Jc21CSu6kOBz9x3OQLr+XFKCBfaDWRzp5119wDKTXlIOqOJbcO3eevLX8MtzL\nnKato9zi+DI8UWSH028r14zTz7/uqSM+E5NOcGECgYApz3OkfmwN2RvpaUUaiKI4\nAjZrxwgLdBj+n7WHcXpinkFTEAYIx0gXuaEUQZLnftx3iTSvSo90K5nnIjCET6SR\nl0dftaur+ggxjmVVy4kxsQXEt6FnEe4F1mzpyZVCs6xMPTbTNcBgqaXAUPsHRiNx\nt4goUruXiWWaSkY4mwGfLg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-35s7m@marocculture-e219e.iam.gserviceaccount.com",
+  "client_id": "104479127072579655562",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-35s7m%40marocculture-e219e.iam.gserviceaccount.com"
+}
