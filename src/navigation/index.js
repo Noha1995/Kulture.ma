@@ -51,7 +51,7 @@ function TabNavigation() {
   return (
     <TabBottom.Navigator initialRouteName={"HomeApp"} 
     tabBarOptions={{
-      activeTintColor: 'blue', inactiveTintColor: 'white' ,labelStyle:{fontWeight:'bold'} ,tabStyle:{paddingBottom:2,backgroundColor:'purple'}
+      activeTintColor: '#BABCF7', inactiveTintColor: 'white' ,labelStyle:{fontWeight:'bold'} ,tabStyle:{paddingBottom:2,backgroundColor:'purple'}
     }}
     >
         <TabBottom.Screen name={"Home"} component={Acceuil }

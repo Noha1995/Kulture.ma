@@ -1,15 +1,17 @@
-import React ,{useEffect} from 'react'
-import {Text,View ,Image,Dimensions,TouchableOpacity ,ScrollView} from 'react-native'
+import React ,{useEffect ,useRef} from 'react'
+import {Text,View ,Image,Dimensions,TouchableOpacity ,ScrollView ,StyleSheet} from 'react-native'
 import {Icon} from 'react-native-elements'
 import { StatusBar } from 'expo-status-bar';
 import Headerr from '../components/common/Header'
 import { useDispatch, useSelector } from 'react-redux'
+import MapView, { Marker } from "react-native-maps";
 
 
 
 
 function DetailEvent(props){
     const dispatch=useDispatch()
+    var myRef = useRef("MapView");
 
     //dispatch data of categorie
     useEffect(()=>{
@@ -72,7 +74,7 @@ function DetailEvent(props){
                     size={16}
                     reverseColor={'white'}
                 />
-                    <Text style={{marginLeft:5,fontSize:12}}>
+                    <Text style={{marginLeft:5,fontSize:16}}>
                     {props.route.params.data.item.time}
                     </Text>
                 </View>
@@ -85,17 +87,39 @@ function DetailEvent(props){
                     size={16}
                     reverseColor={'white'}
                 />
-                    <Text style={{marginLeft:5,fontSize:12}}>
+                    <Text style={{marginLeft:5,fontSize:16}}>
                     {props.route.params.data.item.localisation}
                     </Text>
                 </View>
               
                 </View>
-                <View style={{marginTop:20,marginBottom:10}}>
+                <View style={{marginTop:20,marginBottom:5}}>
                     <Text style={{fontSize:17}}>
                     {props.route.params.data.item.text}
                     </Text>
                 </View>
+                
+                {/* map affiche l'emplacement de l'evenement selon lat et lng*/}
+                <View style={styles.map}>
+              <MapView
+                ref={myRef}
+                style={{ height: 300 }}
+                initialRegion={{
+                  latitude: 35.777745,
+                  longitude: -5.808364,
+                  latitudeDelta: 0.05,
+                  longitudeDelta: 0.05,
+                }}
+                // onMarkerPress={zoomPress}
+              >
+                <Marker
+                  coordinate={{
+                    latitude: 35.777745,
+                    longitude: -5.808364,
+                  }}
+                />
+              </MapView>
+            </View>
 
             </View>
 
@@ -105,3 +129,14 @@ function DetailEvent(props){
     )
 }
 export default DetailEvent
+
+const styles = StyleSheet.create({
+map: {
+    flex: 1,
+    borderWidth: 1,
+    borderColor: "grey",
+    //marginHorizontal: 10,
+    marginTop: 10,
+    marginBottom: 5,
+  }
+})

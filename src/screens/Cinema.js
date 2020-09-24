@@ -98,7 +98,7 @@ const Cinema = ({ navigation }) => {
                                        // style={{ flex: 1 }}
                                     >
                                         <Text style={{paddingLeft:18}}>
-                                             {item.item.date}
+                                             {item.item.time}
                                         </Text>
                                     </View>
 

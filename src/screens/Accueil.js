@@ -166,12 +166,12 @@ function Home({ navigation, route }) {
 
     return (
         <View style={styles.container}>
-            <StatusBar style="light" />
+            <StatusBar style={{color:'white'}} backgroundColor="purple" />
             <Headerr nav={navigation} nameIconRight={'search'} centerIcon={'img'} leftIcon={'nav-icon'} />
             {/* le premier div qui contient nbr des sorties et les 2 buttons */}
 
             <View 
-            style={{flex:1.5,
+            style={{flex:1,
              // backgroundColor:'yellow',
                 justifyContent:'center',alignItems:'center' }}
 
@@ -421,7 +421,7 @@ const styles = StyleSheet.create({
         paddingRight: 5
     },
     buttonContainer: {
-        width: Dimensions.get('window').width / 1.2,
+        width: Dimensions.get('window').width / 1.1,
         marginBottom: 10,
       //  backgroundColor: 'black'
       backgroundColor:'purple'
@@ -526,7 +526,7 @@ const styles = StyleSheet.create({
 
     },
     footer: {
-        flex:1,
+        flex:0.5,
         justifyContent:'center',
        // marginTop: 10,
        marginHorizontal:5,
