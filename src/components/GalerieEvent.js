@@ -38,7 +38,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
               data.item.images.map((i, key) => (
                   <View
                     style={{ flex: 1, alignItems: "center" }}
-                     //key={key}
+                     key={key}
                   >
                     <Image
                       source={i}
@@ -57,7 +57,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
         return(
           <View style={{flexWrap:'wrap',flexDirection:'row',marginTop:25 ,justifyContent:'center'}}  >
             {data.item.images.map((i,key)=>
-            <TouchableOpacity onPress={(e)=>setInitialPage(key)} >
+            <TouchableOpacity onPress={(e)=>setInitialPage(key)} key={key}>
                     <Image source={i} style={{height:150,width:150,margin:5}} />
 
             </TouchableOpacity>

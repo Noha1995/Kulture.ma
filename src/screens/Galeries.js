@@ -8,13 +8,13 @@ import { useDispatch, useSelector } from 'react-redux'
 
 
 
-const Theatre = ({ navigation }) => {
+const Galeries = ({ navigation }) => {
     const dispatch=useDispatch()
 
     //dispatch the name of categorie pour le stocke dans isCategorie value
     useEffect(()=>{
 
-        dispatch({ type: 'CHANGE_Categorie_STATUS',payload:'Theatre'})
+        dispatch({ type: 'CHANGE_Categorie_STATUS',payload:'Galeries'})
 
     },[])
 
@@ -22,11 +22,11 @@ const Theatre = ({ navigation }) => {
     const headerList=()=>{
         return(
             <View>
-                 <StatusBar backgroundColor="#4682B4" style="light" />
-            <Headerr nav={navigation} nameIconRight={'search'} centerIcon={'Theatre'} />
+                 <StatusBar backgroundColor="#006400" style="light" />
+            <Headerr nav={navigation} nameIconRight={'search'} centerIcon={'Galeries'} />
             <View style={{ flexDirection: 'row', justifyContent: 'center', marginTop: 10 }}>
-            <Text style={{ fontWeight: 'bold', fontSize: 30 ,color:'#4682B4'}}> 03 </Text>
-            <Text style={{ fontSize: 30 ,color:'#4682B4'}}>Pieces</Text>
+            <Text style={{ fontWeight: 'bold', fontSize: 30 ,color:'#006400'}}> 03 </Text>
+            <Text style={{ fontSize: 30 ,color:'#006400'}}>Galeries</Text>
 
         </View>
             <View style={{ alignItems: 'center' }}>
@@ -69,7 +69,7 @@ const Theatre = ({ navigation }) => {
             <TouchableOpacity style={styles.containerList} onPress={() =>
                 navigation.navigate('Details', {
                     screen: 'Resume',
-                    params: { img: item.item.img  , data: item ,category:'Theatre'}
+                    params: { img: item.item.img  , data: item ,category:'Galeries'}
                   })
             //navigation.navigate('Details', { img: item.item.img, data: item })
              }>
@@ -157,7 +157,7 @@ const Theatre = ({ navigation }) => {
     )
 }
 
-export default Theatre;
+export default Galeries;
 
 const styles = StyleSheet.create({
     container: {
@@ -210,7 +210,7 @@ const styles = StyleSheet.create({
     buttonContainer: {
         width: Dimensions.get('window').width / 1.8,
         marginBottom: 10,
-        backgroundColor: '#4682B4',
+        backgroundColor: '#006400',
         marginTop: 5
 
     },

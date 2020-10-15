@@ -40,7 +40,7 @@ function Headerr(props) {
 
         <Image
           style={styles.logo}
-          source={require('../../../assets/KultureUI.png')}
+          source={require('../../../assets/Kulture.png')}
         />
       }
       rightComponent={
@@ -53,7 +53,20 @@ function Headerr(props) {
         />
       }
       containerStyle={{
-        backgroundColor: props.centerIcon == 'Cinema' ? 'black' : 'purple',
+        backgroundColor: 
+        props.centerIcon == 'Cinema' ?
+         'black' :
+         props.centerIcon == 'Theatre' ?
+         '#4682B4':
+         props.centerIcon =='Music' ?
+         '#DB7093':
+         props.centerIcon=='Galeries'?
+         '#006400':
+         props.centerIcon=='Visites'?
+         '#FF6347':
+         props.centerIcon=='JeunePublic'?
+         '#20B2AA':
+          '#008cd6',
         justifyContent: 'space-around',
         height: 100,
         // position:props.categorie?'absolute':'relative',
@@ -67,10 +80,10 @@ export default Headerr
 
 const styles = StyleSheet.create({
   logo: {
-    width: 270,
+    width: 150,
     height: 50,
    // backgroundColor:'green',
-    marginTop:15
+   // marginTop:5
   },
   title: {
     fontSize: 20,

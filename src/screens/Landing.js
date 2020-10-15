@@ -45,7 +45,7 @@ function Landing(){
          <View style={{marginLeft:50}}>
          <Image
         style={styles.logo}
-        source={require('../../assets/logo2-removebg-preview.png')}
+        source={require('../../assets/Kulture.png')}
       />
       <View style={styles.textDescriptionContainer}>
           <Text style={styles.textDescription}>Bonjour et bienvenue  </Text>

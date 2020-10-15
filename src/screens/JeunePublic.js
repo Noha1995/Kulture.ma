@@ -8,13 +8,13 @@ import { useDispatch, useSelector } from 'react-redux'
 
 
 
-const Theatre = ({ navigation }) => {
+const JeunePublic = ({ navigation }) => {
     const dispatch=useDispatch()
 
     //dispatch the name of categorie pour le stocke dans isCategorie value
     useEffect(()=>{
 
-        dispatch({ type: 'CHANGE_Categorie_STATUS',payload:'Theatre'})
+        dispatch({ type: 'CHANGE_Categorie_STATUS',payload:'JeunePublic'})
 
     },[])
 
@@ -22,11 +22,11 @@ const Theatre = ({ navigation }) => {
     const headerList=()=>{
         return(
             <View>
-                 <StatusBar backgroundColor="#4682B4" style="light" />
-            <Headerr nav={navigation} nameIconRight={'search'} centerIcon={'Theatre'} />
+                 <StatusBar backgroundColor="#20B2AA" style="light" />
+            <Headerr nav={navigation} nameIconRight={'search'} centerIcon={'JeunePublic'} />
             <View style={{ flexDirection: 'row', justifyContent: 'center', marginTop: 10 }}>
-            <Text style={{ fontWeight: 'bold', fontSize: 30 ,color:'#4682B4'}}> 03 </Text>
-            <Text style={{ fontSize: 30 ,color:'#4682B4'}}>Pieces</Text>
+            <Text style={{ fontWeight: 'bold', fontSize: 30 ,color:'#20B2AA'}}> 03 </Text>
+            <Text style={{ fontSize: 30 ,color:'#20B2AA'}}>Spectacles</Text>
 
         </View>
             <View style={{ alignItems: 'center' }}>
@@ -69,7 +69,7 @@ const Theatre = ({ navigation }) => {
             <TouchableOpacity style={styles.containerList} onPress={() =>
                 navigation.navigate('Details', {
                     screen: 'Resume',
-                    params: { img: item.item.img  , data: item ,category:'Theatre'}
+                    params: { img: item.item.img  , data: item ,category:'JeunePublic'}
                   })
             //navigation.navigate('Details', { img: item.item.img, data: item })
              }>
@@ -157,7 +157,7 @@ const Theatre = ({ navigation }) => {
     )
 }
 
-export default Theatre;
+export default JeunePublic;
 
 const styles = StyleSheet.create({
     container: {
@@ -210,7 +210,7 @@ const styles = StyleSheet.create({
     buttonContainer: {
         width: Dimensions.get('window').width / 1.8,
         marginBottom: 10,
-        backgroundColor: '#4682B4',
+        backgroundColor: '#20B2AA',
         marginTop: 5
 
     },

@@ -4,9 +4,9 @@
     "slug": "MarocCultureTest",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/KulIcon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/KulLogo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },

@@ -23,7 +23,6 @@ function Home({ navigation, route }) {
 
 
     useEffect(() => {
-        console.log("isMapsvg component Accueil", isMapSvg)
         // console.log("route",route)
 
         if (isMapSvg && route.params) {
@@ -166,7 +165,7 @@ function Home({ navigation, route }) {
 
     return (
         <View style={styles.container}>
-            <StatusBar style={{color:'white'}} backgroundColor="purple" />
+            <StatusBar style={{color:'white'}} backgroundColor="#008cd6" />
             <Headerr nav={navigation} nameIconRight={'search'} centerIcon={'img'} leftIcon={'nav-icon'} />
             {/* le premier div qui contient nbr des sorties et les 2 buttons */}
 
@@ -286,7 +285,8 @@ function Home({ navigation, route }) {
                     </TouchableOpacity>
                 </View>
                 <View style={styles.row}>
-                    <TouchableOpacity style={styles.rowCategorieMusique} onPress={() => console.log('musique')}>
+                    <TouchableOpacity style={styles.rowCategorieMusique} onPress={() => navigation.navigate('Music')}
+>
                     <View   style={{margin:5,flexDirection:'row',flex:1,alignItems:'center',borderColor:'white',borderWidth:1,justifyContent:'space-between',paddingRight:2}}>
 
                         <View 
@@ -301,7 +301,7 @@ function Home({ navigation, route }) {
                          />
                          </View>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.rowCategorieGalerie} onPress={() => console.log('galeries')}>
+                    <TouchableOpacity style={styles.rowCategorieGalerie} onPress={() => navigation.navigate('Galeries')}>
                     <View   style={{margin:5,flexDirection:'row',flex:1,justifyContent:'space-between',alignItems:'center',borderColor:'white',borderWidth:1,paddingRight:2}}>
 
                         <View style={{alignItems:'center',flex:1}}>
@@ -315,28 +315,29 @@ function Home({ navigation, route }) {
                     </TouchableOpacity>
                 </View>
                 <View style={styles.row}>
-                    <TouchableOpacity style={styles.rowCategoriePublic} onPress={() => console.log('jeune public')}>
+                    <TouchableOpacity style={styles.rowCategoriePublic} onPress={() => navigation.navigate('Visites')}
+>
                     <View   style={{margin:5,flexDirection:'row',flex:1,justifyContent:'space-between',alignItems:'center',borderColor:'white',borderWidth:1,paddingRight:2}}>
 
                         <View
                             style={{alignItems:'center',flex:1}}
                         >
-                            <Text style={styles.categorieTitle}>VISITES</Text>
-                            <Text style={styles.categorieDescription}>{nbrVisites}{' '} SPECTA</Text>
+                            <Text style={styles.categorieTitle}>MUSEES</Text>
+                            <Text style={styles.categorieDescription}>{nbrVisites}{' '} VISITES</Text>
                         </View>
                         <Image source={require('../../assets/spect.png')} 
                         style={{height:50,width:50}}
                         />
                         </View>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.rowCategorieVisites} onPress={() => console.log('visites')}>
+                    <TouchableOpacity style={styles.rowCategorieVisites}  onPress={() => navigation.navigate('JeunePublic')}>
                     <View   style={{margin:5,flexDirection:'row',flex:1,justifyContent:'space-between',alignItems:'center',borderColor:'white',borderWidth:1,paddingRight:2}}>
 
                         <View 
                         style={{alignItems:'center',flex:1}}
                         >
                             <Text style={styles.categorieTitle}>JEUNE PUBLIC</Text>
-                            <Text style={styles.categorieDescription}>{nbrJeunePublic}{' '} VISITES</Text>
+                            <Text style={styles.categorieDescription}>{nbrJeunePublic}{' '} SPECTA</Text>
                         </View>
                        
                             <Image source={require('../../assets/kids.png')} 
@@ -424,7 +425,7 @@ const styles = StyleSheet.create({
         width: Dimensions.get('window').width / 1.1,
         marginBottom: 10,
       //  backgroundColor: 'black'
-      backgroundColor:'purple'
+      backgroundColor:'#008cd6'
     },
     categorieTitle: {
         // fontWeight:'bold',
@@ -466,7 +467,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#4682B4',
         flexDirection: 'row',
         flex: 1,
-        borderRadius: 5,
+       // borderRadius: 5,
         marginRight:5,
         marginLeft:2.5,
         // flexDirection:'row',flex:1,justifyContent:'space-between',alignItems:'center',borderColor:'white',borderWidth:1,paddingRight:10
@@ -476,7 +477,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#DB7093',
         flexDirection: 'row',
         flex: 1,
-        borderRadius: 5,
+       // borderRadius: 5,
         marginLeft:5,
         marginRight:2.5,
         marginTop:5,
@@ -486,7 +487,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#006400',
         flexDirection: 'row',
         flex: 1,
-        borderRadius: 5,
+       // borderRadius: 5,
         marginRight:5,
         marginLeft:2.5,
         marginTop:5,
@@ -497,7 +498,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#FF6347',
         flexDirection: 'row',
         flex: 1,
-        borderRadius: 5,
+       // borderRadius: 5,
         marginLeft:5,
         marginRight:2.5,
         marginTop:5,
@@ -507,7 +508,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#20B2AA',
          flexDirection: 'row',
          flex: 1,
-        borderRadius: 5,
+       // borderRadius: 5,
         marginRight:5,
         marginLeft:2.5,
         marginTop:5,

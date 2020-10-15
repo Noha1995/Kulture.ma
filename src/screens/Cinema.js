@@ -3,7 +3,7 @@ import { Text, View, Dimensions, StyleSheet, FlatList, Image, TouchableOpacity, 
 import { Icon, Card, Overlay, ListItem, Button } from 'react-native-elements'
 import Headerr from '../components/common/Header'
 import { StatusBar } from 'expo-status-bar';
-import { DATA } from '../components/Data/Ville'
+import { DATACinema } from '../components/data/Data'
 import { useDispatch, useSelector } from 'react-redux'
 
 
@@ -62,7 +62,6 @@ const Cinema = ({ navigation }) => {
 
 
     const Item = (item) => {
-        console.log(item.item.title)
 
         return (
 
@@ -70,7 +69,7 @@ const Cinema = ({ navigation }) => {
             <TouchableOpacity style={styles.containerList} onPress={() =>
                 navigation.navigate('Details', {
                     screen: 'Resume',
-                    params: { img: item.item.img  , data: item }
+                    params: { img: item.item.img  , data: {index:item.index ,item:{date:item.item.date,id:item.item.id,images:item.item.images,localisation:item.item.localisation,text:item.item.text,time:item.item.time,title:item.item.title}} }
                   })
             //navigation.navigate('Details', { img: item.item.img, data: item })
              }>
@@ -146,7 +145,7 @@ const Cinema = ({ navigation }) => {
       
 
             <FlatList
-                data={DATA}
+                data={DATACinema}
                 renderItem={Item}
                 keyExtractor={item => item.id}
                 ListHeaderComponent={headerList}

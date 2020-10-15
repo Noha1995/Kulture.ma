@@ -19,7 +19,20 @@ function DetailEvent(props){
     },[])
     return(
         <ScrollView>
-            <StatusBar backgroundColor="black" style="light" />
+            <StatusBar 
+            backgroundColor={
+                props.route.params.category=='Theatre'?
+                '#4682B4':
+                props.route.params.category=='Music'?
+                '#DB7093':
+                props.route.params.category=='Galeries'?
+                '#006400':
+                props.route.params.category=='JeunePublic'?
+                '#20B2AA':
+                props.route.params.category=='Visites'?
+                '#FF6347':
+                'black'}
+             style="light" />
             {/* <Headerr nav={navigation} nameIconRight={'search'} centerIcon={'Cinema'} nav={navigation} categorie={'cat'} /> */}
         
         <View style={{flex:1}}> 
@@ -60,6 +73,7 @@ function DetailEvent(props){
 
             </View>
             <View style={{marginHorizontal:20 ,marginTop:10}}>
+                {console.log(props.route.params.data)}
               
                 <View style={{marginBottom:5}}>
                     <Text style={{fontWeight:'bold',fontSize:22}}>
@@ -103,6 +117,7 @@ function DetailEvent(props){
                 <View style={styles.map}>
               <MapView
                 ref={myRef}
+                provider="google"
                 style={{ height: 300 }}
                 initialRegion={{
                   latitude: 35.777745,
@@ -110,6 +125,51 @@ function DetailEvent(props){
                   latitudeDelta: 0.05,
                   longitudeDelta: 0.05,
                 }}
+                // customMapStyle={[
+                //     {
+                //       featureType: "administrative",
+                //       elementType: "geometry",
+                //       stylers: [
+                //       {
+                //           visibility: "off"
+                //       }
+                //       ]
+                //     },
+                //     {
+                //       featureType: "poi",
+                //       stylers: [
+                //         {
+                //           visibility: "off"
+                //         }
+                //       ]
+                //     },
+                //     {
+                //       featureType: "road",
+                //       elementType: "labels.icon",
+                //       stylers: [
+                //         {
+                //           visibility: "off"
+                //         }
+                //       ]
+                //     },
+                //     {
+                //       featureType: "transit",
+                //       stylers: [
+                //         {
+                //           visibility: "off"
+                //         }
+                //       ]
+                //     }
+                //   ]}
+        
+                //mapType="none"
+                //  showsPointsOfInterest={false}
+                //   showsBuildings={false}
+                //   showsCompass={false}
+                //   showsScale={false}
+                //   showsTraffic={false}
+                //   showsIndoors={false}
+                //   showsIndoorLevelPicker={false}
                 // onMarkerPress={zoomPress}
               >
                 <Marker
@@ -117,6 +177,9 @@ function DetailEvent(props){
                     latitude: 35.777745,
                     longitude: -5.808364,
                   }}
+                 
+                  
+
                 />
               </MapView>
             </View>

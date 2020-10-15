@@ -13,7 +13,10 @@ import Acceuil from '../screens/Accueil'
 import DetailEvent from '../screens/DetailEvent'
 import BonPlans from '../screens/BonPlans'
 import Theatre from '../screens/Theatre'
-import Festivals from '../screens/Festivals';
+import Visites from '../screens/Visites';
+import Music from '../screens/Music';
+import Galeries from '../screens/Galeries';
+import JeunePublic from '../screens/JeunePublic';
 import MapSvg from '../components/MapSvg'
 import Settings from '../screens/Settings'
 import { useSelector } from 'react-redux';
@@ -51,7 +54,7 @@ function TabNavigation() {
   return (
     <TabBottom.Navigator initialRouteName={"HomeApp"} 
     tabBarOptions={{
-      activeTintColor: '#BABCF7', inactiveTintColor: 'white' ,labelStyle:{fontWeight:'bold'} ,tabStyle:{paddingBottom:2,backgroundColor:'purple'}
+      activeTintColor: '#ff3300', inactiveTintColor: 'white' ,labelStyle:{fontWeight:'bold'} ,tabStyle:{paddingBottom:2,backgroundColor:'#008cd6'}
     }}
     >
         <TabBottom.Screen name={"Home"} component={Acceuil }
@@ -60,7 +63,7 @@ function TabNavigation() {
         }}
       />
 
-      <TabBottom.Screen name={"News"} component={News}
+      <TabBottom.Screen name={"Actualités"} component={News}
         options={{
           tabBarIcon: ({ color, size, focused }) => (<Icon name='file' type='font-awesome' color={color} size={focused ? 30 : 21} />)
         }}
@@ -79,7 +82,7 @@ function TabNavigation() {
 const Stack = createStackNavigator();
 
 function AccueilStack() {
-
+  //contient le nom de la categorie
   const isCategorie = useSelector(state => state.Skip.isCategorie)
 
   return (
@@ -98,9 +101,13 @@ function AccueilStack() {
       <Stack.Screen name="Accueil" component={TabNavigation} options={{ headerShown: false }} />
       <Stack.Screen name="MapSvg" component={MapSvg} options={{ headerShown: false }} />
       <Stack.Screen name="Cinema" component={Cinema} options={{ headerShown: false }} />
+      <Stack.Screen name="Galeries" component={Galeries} options={{ headerShown: false }} />
+      <Stack.Screen name="JeunePublic" component={JeunePublic} options={{ headerShown: false }} />
       <Stack.Screen name="Theatre" component={Theatre} options={{ headerShown: false }} />
       <Stack.Screen name="BonPlans" component={BonPlans} options={{ headerShown: false }} />
-      <Stack.Screen name="Festivals" component={Festivals} options={{ headerShown: false }} />
+      <Stack.Screen name="Visites" component={Visites} options={{ headerShown: false }} />
+      <Stack.Screen name="Music" component={Music} options={{ headerShown: false }} />
+
       <Stack.Screen name="Details" component={MyTabsTop}
         options={{ headerShown: true }}
       />
@@ -117,7 +124,8 @@ function CustomDrawerContent(props) {
   return (
     <DrawerContentScrollView {...props}>
       <Card
-        img={require('../../assets/logo2.png')} />
+        // img={require('../../assets/logo2.png')}
+         />
       <DrawerItemList {...props} />
     </DrawerContentScrollView>
   );
